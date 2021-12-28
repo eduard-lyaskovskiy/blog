@@ -1,0 +1,26 @@
+version: "3"
+
+volumes:
+  mongodb_database:
+
+services:
+  client-blog:
+    build: ./client
+    restart: always
+    ports:
+      - 3000:3000
+  server-blog:
+    build: .
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      - NODE_ENV=production
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongodb_database:/data/db
+      - ./mongodb/init.js:/docker-entrypoint-initdb.d/init.js
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: blog

@@ -1,0 +1,6 @@
+.git
+.vscode
+.idea
+node_modules
+npm-debug.log
+client

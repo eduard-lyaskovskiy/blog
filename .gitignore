@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+node_modules/
+yarn-error.log
+public/
+client/
+client/node_modules
