@@ -5,4 +5,4 @@
 ### `docker-compose up -d`
 Runs the docker app containers in background
 
-[PostMan Collection](PostManCollection.json)
+[PostMan Collection](BLOG.postman_collection.json)
